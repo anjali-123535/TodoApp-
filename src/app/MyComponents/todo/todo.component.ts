@@ -31,7 +31,17 @@ todos:Todo[];
 
     ]
    }
-
+   
+   //deleting todo item
+   deleteTodo(todo: Todo){
+     const index=this.todos.indexOf(todo)
+     this.todos.splice(index,1)
+   }
+   addTodo(todo:Todo)
+   {
+     console.log(todo)
+     this.todos.push(todo)
+   }
   ngOnInit(): void {
   }
 

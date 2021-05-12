@@ -1,0 +1,15 @@
+<div class="container my-3">
+    <h3>Add Todos</h3>
+    <!--ngSubmit ensures that the page does get reloaded after pressing submit button-->
+    <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" id="title" placeholder="Title">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <textarea type="text" [(ngModel)]="desc" name="desc" class="form-control" id="desc" rows="2"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Todo</button>
+    </form>
+    </div>

@@ -1,4 +1,8 @@
-<!--ngFor directive-->
-<ul *ngFor="let todo of todos">
-    <li>{{todo.sno}}. {{todo.title}} - {{todo.desc}}</li>
-</ul>
+<!--ngFor directive
+listen to tododelete event or jab event aaye to kya krna h wo deleteTodo function m h
+-->
+<app-add-todo (todoadd)="addTodo($event)"></app-add-todo>
+<h3>Todo List</h3>
+<div *ngFor="let todo of todos">
+    <app-todo-item [todo]="todo" (tododelete)="deleteTodo($event)"></app-todo-item>
+</div>
